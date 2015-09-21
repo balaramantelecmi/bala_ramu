@@ -1,0 +1,21 @@
+- name: freeswitch
+  hosts: kumar1
+  sudo: True
+  tasks:
+      - name: install freeswitch
+        apt: name=freeswitch update_cache=yes
+- name: install packages
+  
+  
+  with_items:
+    - build-essential
+    - flex
+    - bison
+    - libncurses5-dev
+    - unixodbc-dev 
+    - libnspr4
+    - autoconf
+    - automake
+    - libtool
+    - libmudflap0-dev
+    - libltdl3-dev

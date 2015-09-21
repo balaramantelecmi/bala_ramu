@@ -1,0 +1,12 @@
+- name: tomcat
+  hosts: kumar1
+  sudo: True
+  tasks:
+       - name: update
+         action: apt update_cache=yes
+
+       - name: install
+         apt: name=tomcat7 state=present
+       
+       - name: tomcat stopped
+         service: name=tomcat7 state=stopped 

@@ -1,0 +1,4 @@
+- name: apache2
+  hosts: kumar1
+  sudo: True
+

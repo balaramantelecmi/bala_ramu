@@ -1,0 +1,9 @@
+- name: python
+  hosts: kumar1
+  sudo : True
+  tasks:
+    - name: install python
+      apt: name=python3.4 update_cache=yes
+    
+    - name: started python
+      service: name=python state=started   

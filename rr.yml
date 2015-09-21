@@ -1,0 +1,30 @@
+ - name: ruby
+   hosts: kumar1
+   sudo: True
+   tasks:
+      - name: install curl
+        apt: name=curl  
+      
+      - name: rbenv | install build depends
+        apt: pkg={{ item }} state=latest install_recommends=no
+        with_items:
+        - build-essential
+        - git
+        - libcurl4-openssl-dev
+        - libmysqlclient-dev
+        - libsqlite3-dev
+        - libpq-dev
+        - libreadline6-dev
+        - libssl-dev
+        - libxml2-dev
+        - libxslt1-dev
+        - zlib1g-dev
+        - libc6-dev
+        - libyaml-dev
+      - name: install ruby
+        apt: name=ruby state=present
+
+      - name: install rails
+        apt: name=rails state=present
+   
+     

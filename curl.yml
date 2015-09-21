@@ -1,0 +1,14 @@
+- name: curl
+  hosts: kumar1
+  sudo : True
+  tasks:
+    - name: install curl
+      apt: name=curl update_cache=yes
+
+    - name: install curl
+      service: name=curl state=stopped 
+
+  
+
+
+

@@ -1,0 +1,10 @@
+- name: nginx
+  hosts: kumar1
+  sudo: True
+  tasks:
+      - name: install nginx
+        apt: name=nginx update_cache=yes
+
+      - name: stoped nginx
+        service: name=nginx state=restarted
+ 

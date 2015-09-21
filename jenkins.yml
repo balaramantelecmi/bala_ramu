@@ -1,0 +1,20 @@
+- name: jenkins
+  hosts: kumar1
+  sudo: True
+  tasks:
+     - name: install apache2
+       apt: name=apache2 state=present
+
+     - name: jenkins key
+       shell: wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+      
+     - name: jenkins sources
+       shell: sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+     - name: install jenkins
+       apt: name=jenkins update_cache=yes
+
+     - name: stopped jenkins
+       service: name=jenkins state=started
+  
+
