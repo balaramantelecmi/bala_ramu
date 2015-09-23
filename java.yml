@@ -1,0 +1,29 @@
+- name: java
+  hosts: kumar1
+  sudo : True
+  tasks:
+    - name: install java
+      apt: name=default-jre update_cache=yes 
+
+    - name: install jdk
+      apt: name=default-jdk
+
+    - name: install jre
+      apt: name=openjdk-7-jre
+
+    - name: install jdk
+      apt: name=openjdk-7-jdk 
+
+    - name: install python
+      apt: name=python-software-properties 
+
+    - name: repository
+      apt_repository: repo=ppa:webupd8team/java
+
+    - name: install oracle
+      apt: name=oracle-java9-installer state=present update_cache=yes
+      
+
+
+
+
