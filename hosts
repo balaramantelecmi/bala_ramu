@@ -1,2 +1,2 @@
 [kumar1]
-aws ansible_ssh_host=52.89.87.95 ansible_ssh_port=22 ansible_ssh_user=ubuntu anible_ssh_private_key_file=raguraman.pem
+aws ansible_ssh_host=52.89.86.153 ansible_ssh_port=22 ansible_ssh_user=ubuntu anible_ssh_private_key_file=/home/ubuntu/Desktop/bala_ramu/raguraman.pem
