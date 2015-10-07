@@ -1,2 +1,2 @@
 [kumar1]
-aws ansible_ssh_host=52.89.116.10 ansible_ssh_port=80 ansible_python_interpreter=/usr/local/lib/python3.4 ansible_ssh_user=ubuntu anible_ssh_private_key_file=/home/ubuntu/Desktop/raguraman.pem
+aws ansible_ssh_host=52.89.116.10 ansible_ssh_port=80 ansible_python_interpreter=/usr/local/lib/python2.7 ansible_ssh_user=ubuntu anible_ssh_private_key_file=/home/ubuntu/Desktop/raguraman.pem
